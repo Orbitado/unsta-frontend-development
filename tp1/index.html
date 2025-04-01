@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Primera Página con Imagen</title>
+    <link rel="stylesheet" href="globals.css">
+  </head>
+  <body>
+    <!-- Navegación a páginas secundarias -->
+    <header>
+      <nav class="main-nav">
+        <h3>Ir a páginas secundarias:</h3>
+        <ul class="main-nav__links">
+          <li class="main-nav__item">
+            <a href="pagina2.html" class="main-nav__link">Página 2</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="pagina3.html" class="main-nav__link">Página 3</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Encabezado -->
+    <h1 class="page__title">Mi primera página HTML</h1>
+    <div class="image-container">
+      <img 
+        src="https://picsum.photos/400/300" 
+        alt="Imagen de ejemplo"
+        class="image-container__img"
+      />
+    </div>
+    <p class="page__paragraph">
+      The World Wide Web Consortium is the main international standards
+      organization for the World Wide Web. Founded in 1994 and currently led by
+      Tim Berners-Lee, the consortium is made up of member organizations that
+      maintain full-time staff working together in the development of standards
+      for the World Wide Web.
+    </p>
+
+    <!-- Tabla de datos personales -->
+    <table class="data-table">
+      <tr>
+        <td class="data-table__cell"><strong>Nacionalidad:</strong></td>
+        <td class="data-table__cell">Argentina</td>
+      </tr>
+      <tr>
+        <td class="data-table__cell"><strong>Edad:</strong></td>
+        <td class="data-table__cell">19</td>
+      </tr>
+      <tr>
+        <td class="data-table__cell"><strong>Localidad:</strong></td>
+        <td class="data-table__cell">San Miguel de Tucumán</td>
+      </tr>
+      <tr>
+        <td class="data-table__cell"><strong>E mail:</strong></td>
+        <td class="data-table__cell">vleonardojuanpablo@icloud.com</td>
+      </tr>
+      <tr>
+        <td class="data-table__cell"><strong>Carrera:</strong></td>
+        <td class="data-table__cell">Desarrollo de Software</td>
+      </tr>
+      <tr>
+        <td class="data-table__cell"><strong>Curso:</strong></td>
+        <td class="data-table__cell">2do Año</td>
+      </tr>
+    </table>
+
+    <!-- Lista de lenguajes de programación -->
+    <section class="tech-stack">
+      <h2 class="tech-stack__title">Mi Stack Tecnológico</h2>
+      <ul class="tech-stack__list">
+        <li class="tech-stack__category">
+          Frontend
+          <ol class="tech-stack__items">
+            <li class="tech-stack__item">Next.js (Main)</li>
+            <li class="tech-stack__item">React.js</li>
+            <li class="tech-stack__item">TypeScript</li>
+            <li class="tech-stack__item">Tailwind CSS / CSS Modules / SASS</li>
+          </ol>
+        </li>
+        <li class="tech-stack__category">
+          Backend
+          <ol class="tech-stack__items">
+            <li class="tech-stack__item">Nest.js</li>
+            <li class="tech-stack__item">Express.js</li>
+            <li class="tech-stack__item">Node.js</li>
+            <li class="tech-stack__item">MongoDB / PostgreSQL</li>
+          </ol>
+        </li>
+        <li class="tech-stack__category">
+          Lenguajes
+          <ol class="tech-stack__items">
+            <li class="tech-stack__item">TypeScript</li>
+            <li class="tech-stack__item">JavaScript</li>
+          </ol>
+        </li>
+        <li class="tech-stack__category">
+          Herramientas
+          <ol class="tech-stack__items">
+            <li class="tech-stack__item">Git</li>
+            <li class="tech-stack__item">Docker</li>
+            <li class="tech-stack__item">VS Code</li>
+            <li class="tech-stack__item">Postman</li>
+          </ol>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <nav class="social-links">
+        <a
+          href="https://linkedin.com/in/leonardo-valdez"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-links__item social-links__item--linkedin"
+          >LinkedIn</a
+        >
+        <a
+          href="https://github.com/Orbitado"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-links__item social-links__item--github"
+          >GitHub</a
+        >
+        <a
+          href="https://vleonardojuanpablo.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-links__item social-links__item--personal"
+          >Sitio Web</a
+        >
+      </nav>
+    </footer>
+  </body>
+</html>

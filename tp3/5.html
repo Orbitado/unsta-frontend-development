@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario y Validación</title>
+  </head>
+  <body>
+    <h1>Formulario de Datos</h1>
+
+    <form id="dataForm" onsubmit="return validateForm()">
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+      </div>
+      <br />
+
+      <div>
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required />
+      </div>
+      <br />
+
+      <div>
+        <label>Sexo:</label><br />
+        <input type="radio" id="hombre" name="sexo" value="hombre" required />
+        <label for="hombre">Hombre</label><br />
+        <input type="radio" id="mujer" name="sexo" value="mujer" />
+        <label for="mujer">Mujer</label><br />
+      </div>
+      <br />
+
+      <div>
+        <label>Edad:</label><br />
+        <input type="radio" id="edad0-15" name="edad" value="0-15" required />
+        <label for="edad0-15">0-15</label><br />
+        <input type="radio" id="edad15-23" name="edad" value="15-23" required />
+        <label for="edad15-23">15-23</label><br />
+        <input type="radio" id="edad23-35" name="edad" value="23-35" required />
+        <label for="edad23-35">23-35</label><br />
+        <input type="radio" id="edad35-60" name="edad" value="35-60" required />
+        <label for="edad35-60">35-60</label><br />
+        <input type="radio" id="edad>60" name="edad" value=">60" required />
+        <label for="edad>60">>60</label><br />
+        <input type="radio" id="edad>65" name="edad" value=">65" required />
+        <label for="edad>65">>65</label><br />
+      </div>
+      <br />
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <div id="message"></div>
+
+    <script>
+      function validateForm() {
+        const messageDiv = document.getElementById("message");
+        messageDiv.innerHTML = "";
+
+        const nombre = document.getElementById("nombre").value.trim();
+        const apellido = document.getElementById("apellido").value.trim();
+
+        const sexoChecked = document.querySelector(
+          'input[name="sexo"]:checked'
+        );
+        const sexo = sexoChecked ? sexoChecked.value : null;
+
+        const edadChecked = document.querySelector(
+          'input[name="edad"]:checked'
+        );
+        const edad = edadChecked ? edadChecked.value : null;
+
+        if (sexo === "hombre" && edad === ">65") {
+          messageDiv.innerHTML = "Usted puede jubilarse.";
+        } else if (sexo === "mujer" && (edad === ">60" || edad === ">65")) {
+          messageDiv.innerHTML = "Usted puede jubilarse.";
+        } else {
+          messageDiv.innerHTML =
+            "Datos válidos. Usted no cumple los requisitos para jubilarse aún.";
+        }
+
+        return false;
+      }
+    </script>
+  </body>
+</html>

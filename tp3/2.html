@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <script>
+      let qualification = prompt("Ingrese su calificación");
+
+      if (qualification >= 0 && qualification <= 3) {
+        alert("Calificación: Muy deficiente");
+      } else if (qualification > 3 && qualification <= 5) {
+        alert("Calificación: Insuficiente");
+      } else if (qualification > 5 && qualification <= 6) {
+        alert("Calificación: Suficiente");
+      } else if (qualification > 6 && qualification <= 7) {
+        alert("Calificación: Bien");
+      } else if (qualification > 7 && qualification <= 9) {
+        alert("Calificación: Notable");
+      } else if (qualification > 9 && qualification <= 10) {
+        alert("Calificación: Sobresaliente");
+      } else {
+        alert("Por favor ingrese una calificación válida entre 0 y 10");
+      }
+    </script>
+  </body>
+</html>

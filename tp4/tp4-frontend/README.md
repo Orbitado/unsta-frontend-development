@@ -39,7 +39,7 @@ Para ejecutar este proyecto localmente:
 
 ```bash
 # Clonar el repositorio (o descargar)
-git clone https://github.com/orbitado/tp4-frontend.git
+git clone https://github.com/Orbitado/unsta-frontend-development.git
 
 # Navegar al directorio del proyecto
 cd tp4-frontend

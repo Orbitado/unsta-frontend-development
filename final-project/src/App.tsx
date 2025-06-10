@@ -6,7 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Calendar } from "@/components/ui/calendar"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
-import { CalendarIcon, Edit, Trash2 } from "lucide-react"
+import { CalendarIcon, Edit, Trash2, Globe, Building2, Linkedin, Github, Instagram } from "lucide-react"
 import { format } from "date-fns"
 import { es } from "date-fns/locale"
 import { useExpenses } from "./modules/expenses/hooks/use-expenses"
@@ -281,6 +281,88 @@ function App() {
             )}
           </CardContent>
         </Card>
+
+        {/* Footer */}
+        <footer className="mt-16 py-8 border-gray-200 border-t">
+          <div className="mx-auto px-6 max-w-5xl">
+            <div className="space-y-6 text-center">
+              {/* Developer Info */}
+              <div>
+                <h3 className="mb-2 font-semibold text-gray-800 text-lg">
+                  Desarrollado por Leonardo Juan Pablo Valdez
+                </h3>
+                <p className="text-gray-600">
+                  Full Stack Developer & Software Engineer at <a href="https://wootic.co" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700">Wootic</a>
+                </p>
+              </div>
+
+              {/* Social Media Links */}
+              <div className="flex flex-wrap justify-center items-center gap-6">
+                {/* Website */}
+                <a
+                  href="https://vleonardojuanpablo.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:bg-blue-50 px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                >
+                  <Globe className="w-5 h-5" />
+                  <span className="font-medium">Mi Sitio Web</span>
+                </a>
+
+                {/* Company */}
+                <a
+                  href="https://asomelab.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:bg-blue-50 px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                >
+                  <Building2 className="w-5 h-5" />
+                  <span className="font-medium">Mi Empresa</span>
+                </a>
+
+                {/* LinkedIn */}
+                <a
+                  href="https://linkedin.com/in/leonardo-valdez"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:bg-blue-50 px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                >
+                  <Linkedin className="w-5 h-5" />
+                  <span className="font-medium">LinkedIn</span>
+                </a>
+
+                {/* GitHub */}
+                <a
+                  href="https://github.com/Orbitado"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:bg-blue-50 px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                >
+                  <Github className="w-5 h-5" />
+                  <span className="font-medium">GitHub</span>
+                </a>
+
+                {/* Instagram */}
+                <a
+                  href="https://instagram.com/juanpabloovaldez"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:bg-blue-50 px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                >
+                  <Instagram className="w-5 h-5" />
+                  <span className="font-medium">Instagram</span>
+                </a>
+              </div>
+
+              {/* Copyright */}
+              <div className="pt-4 border-gray-100 border-t">
+                <p className="text-gray-500 text-sm">
+                  Proyecto final Desarrollo Frontend - UNSTA 2025 - Profesor: Marcos Rivero
+                </p>
+              </div>
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
   )

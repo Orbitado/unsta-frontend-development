@@ -1,9 +1,8 @@
 import { Expense, CreateExpense } from '../types';
+import { sleep } from '@/lib/utils';
 
 const expenses: Expense[] = [];
 let nextId = 1;
-
-const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
 export const expensesService = {
     getExpenses: async (): Promise<Expense[]> => {
